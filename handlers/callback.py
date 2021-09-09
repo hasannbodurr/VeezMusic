@@ -39,7 +39,7 @@ async def cbstart(_, query: CallbackQuery):
                         "📣 Official Channel", url=f"https://t.me/{UPDATES_CHANNEL}")
                 ],[
                     InlineKeyboardButton(
-                        "🌐 tag botu", url="https://t.me/UtagOnline")
+                        "🌐 tag botu", url="https://t.me/soondurakk")
                 ],[
                     InlineKeyboardButton(
                         "🧪Grubunuza özel bot kurmak için 🧪", url="https://t.me/UtagOnline"
