@@ -61,7 +61,7 @@ async def start_(client: Client, message: Message):
                         "📣 Official Channel", url=f"https://t.me/{UPDATES_CHANNEL}")
                 ],[
                     InlineKeyboardButton(
-                        "🌐Tag ve DC oyunu ", url="https://t.me/UtagOnline")
+                        "🌐Tag ve DC oyunu ", url="https://t.me/soondurakk")
                 ],[
                     InlineKeyboardButton(
                         "🧪 Grubunuza özel bot yapmak için 🧪", url="https://t.me/UtagOnline"
