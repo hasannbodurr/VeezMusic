@@ -39,10 +39,10 @@ async def cbstart(_, query: CallbackQuery):
                         "📣 Official Channel", url=f"https://t.me/{UPDATES_CHANNEL}")
                 ],[
                     InlineKeyboardButton(
-                        "🌐 tag botu", url="https://t.me/soondurakk")
+                        "🌐 tag botu", url="https://t.me/UtagOnline_bot")
                 ],[
                     InlineKeyboardButton(
-                        "🧪Grubunuza özel bot kurmak için 🧪", url="https://t.me/UtagOnline"
+                        "🧪Grubunuza özel bot kurmak için 🧪", url="https://t.me/Baykaoss"
                     )
                 ]
             ]
@@ -176,12 +176,7 @@ async def cbadmin(_, query: CallbackQuery):
 /auth - müzik botunu kullanmak için yetkili kullanıcı
 /deauth - müzik botu kullanmak için yetkisiz
 /control - oynatıcı ayarları panelini aç
-/delcmd (açık | kapalı) - del cmd özelliğini etkinleştir / devre dışı bırak
 /musicplayer (açık / kapalı) - grubunuzdaki müzik çaları devre dışı bırakın / etkinleştirin
-/b ve /tb (ban / geçici ban) - gruptaki kullanıcı kalıcı veya geçici olarak yasaklandı
-/ub - yasaklanmamış kullanıcı için gruptan yasaklandınız
-/m ve /tm (sessiz / geçici sessiz) - gruptaki kalıcı veya geçici olarak sessize alınmış kullanıcının sesini kapat
-/um - grupta sessize aldığınız kullanıcının sesini açmak için
 
 ⚡ __tarafından geliştirildi {BOT_NAME} A.I__""",
         reply_markup=InlineKeyboardMarkup(
