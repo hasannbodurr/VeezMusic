@@ -104,7 +104,7 @@ async def cbbasic(_, query: CallbackQuery):
 
 🎧 [ GRUP VC CMD ]
 
-/play (şarkı adı) - youtube'dan şarkı çal
+/Oynat (şarkı adı) - youtube'dan şarkı çal
 /ytp (şarkı adı) - doğrudan youtube'dan şarkı çal
 /stream (sesi yanıtla) - ses dosyasını kullanarak şarkıyı çal
 /playlist - listedeki şarkıyı sıraya koyar
@@ -168,10 +168,10 @@ async def cbadmin(_, query: CallbackQuery):
         f"""<b>🏮 işte yönetici komutları</b>
 
 /player - müzik çalma durumunu göster
-/pause - müzik akışını duraklat
-/resume - müziğin duraklatıldığını yeniden başlat
+/Durdur - müzik akışını duraklat
+/Devam - müziğin duraklatıldığını yeniden başlat
 /atla - sonraki şarkıya atla
-/end - müzik akışını durdur
+/Son - müzik akışını durdur
 /userbotjoin - asistanı grubunuza katılmaya davet edin
 /auth - müzik botunu kullanmak için yetkili kullanıcı
 /deauth - müzik botu kullanmak için yetkisiz
@@ -352,18 +352,7 @@ async def cbgtools(_, query: CallbackQuery):
 ayrıca grubunuzdaki üyeler için yasaklama ve sessize alma cezaları için bir süre belirleyebilirsiniz, böylece belirtilen süre ile cezadan kurtulabilirler.
 
 ❔ kullanım:
-
-1️⃣ Kullanıcıyı grubunuzdan yasaklayın ve geçici olarak yasaklayın:
-   » /b kullanıcı adı/mesaj yasağını kalıcı olarak yanıtla yazın
-   » /tb kullanıcı adı/mesajı yanıtla/süre yazın kullanıcıyı geçici olarak banlayın
-   » /ub kullanıcı adı/yanıtla kullanıcı yasağını kaldır
-
-2️⃣ Grubunuzdaki kullanıcıyı sessize alın ve geçici olarak sessize alın:
-   » /m kullanıcı adı/mesajı yanıtla yaz, kalıcı olarak sessize al
-   » /tm kullanıcı adı/mesajı yanıtla/süre yazın, kullanıcıyı geçici olarak sessize alın
-   » kullanıcının sesini açmak için /um kullanıcı adı/mesajı yanıtla yazın
-
-📝 not: cmd /b, /tb ve /ub, kullanıcıyı grubunuzdan yasaklama/yasağı kaldırma işlevidir, oysa /m, /tm ve /um, grubunuzdaki kullanıcıyı sessize almak/açmak için kullanılan komutlardır.
+Hoşgeldin
 
 ⚡ __Powered by {BOT_NAME} A.I__""",
         reply_markup=InlineKeyboardMarkup(
