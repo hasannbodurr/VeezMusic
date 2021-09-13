@@ -48,7 +48,7 @@ async def broadcast_handler_open(_, m: Message):
 
 # Ban User
 @Client.on_message(filters.private & filters.command("block") & filters.user(OWNER_ID))
-async def ban(c: Client, m: Message):
+async def block(c: Client, m: Message):
     if len(m.command) == 1:
         await m.reply_text(
             f"this command for ban user, read /help for more info !",
@@ -59,11 +59,11 @@ async def ban(c: Client, m: Message):
         user_id = int(m.command[1])
         ban_duration = int(m.command[2])
         ban_reason = ' '.join(m.command[3:])
-        ban_log_text = f"`Banning user...` \n\nUser ID: `{user_id}` \nDuration: `{ban_duration}` \nReason: `{ban_reason}`"
+        ban_log_text = f"`Banning user...` \n\nUser ID: `{user_id}` \nsüresi: `{ban_duration}` \nsebebi: `{ban_reason}`"
         try:
             await c.send_message(
                 user_id,
-                f"sorry, you're banned!** \n\nReason: `{ban_reason}` \nDuration: `{ban_duration}` day(s). \n\n**💬 message from owner: ask in @{GROUP_SUPPORT} if you think this was an mistake."
+                f"sorry, you're banned!** \n\nsebebi: `{ban_reason}` \nsüresi: `{ban_duration}` day(s). \n\n**💬 message from owner: ask in @{GROUP_SUPPORT} if you think this was an mistake."
             )
             ban_log_text += '\n\n✅ this notification was sent to that user'
         except:
@@ -85,7 +85,7 @@ async def ban(c: Client, m: Message):
 
 # Unban User
 @Client.on_message(filters.private & filters.command("unblock") & filters.user(OWNER_ID))
-async def unban(c: Client, m: Message):
+async def unblock(c: Client, m: Message):
     if len(m.command) == 1:
         await m.reply_text(
             f"this command for unban user, read /help for more info !",
