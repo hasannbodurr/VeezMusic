@@ -58,18 +58,18 @@ async def controlset(_, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "⏸ pause", callback_data="cbpause"
+                        "⏸ Durdur", callback_data="cbpause"
                     ),
                     InlineKeyboardButton(
-                        "▶️ resume", callback_data="cbresume"
+                        "▶️ Devam", callback_data="cbresume"
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        "⏩ skip", callback_data="cbskip"
+                        "⏩ Atla", callback_data="cbskip"
                     ),
                     InlineKeyboardButton(
-                        "⏹ end", callback_data="cbend"
+                        "⏹ Son", callback_data="cbend"
                     )
                 ],
                 [
@@ -92,10 +92,10 @@ async def controlset(_, message: Message):
     )
 
 
-@Client.on_message(command("pause") & other_filters)
+@Client.on_message(command("durdur") & other_filters)
 @errors
 @authorized_users_only
-async def pause(_, message: Message):
+async def durdur(_, message: Message):
     chat_id = get_chat_id(message.chat)
     if (chat_id not in callsmusic.pytgcalls.active_calls) or (
         callsmusic.pytgcalls.active_calls[chat_id] == "paused"
@@ -103,13 +103,13 @@ async def pause(_, message: Message):
         await message.reply_text("❗ nothing in streaming!")
     else:
         callsmusic.pytgcalls.pause_stream(chat_id)
-        await message.reply_text("▶️ music paused!")
+        await message.reply_text("▶️ music durduruldu!")
 
 
-@Client.on_message(command("resume") & other_filters)
+@Client.on_message(command("devam") & other_filters)
 @errors
 @authorized_users_only
-async def resume(_, message: Message):
+async def devam(_, message: Message):
     chat_id = get_chat_id(message.chat)
     if (chat_id not in callsmusic.pytgcalls.active_calls) or (
         callsmusic.pytgcalls.active_calls[chat_id] == "playing"
@@ -117,13 +117,13 @@ async def resume(_, message: Message):
         await message.reply_text("❗ nothing is paused!")
     else:
         callsmusic.pytgcalls.resume_stream(chat_id)
-        await message.reply_text("⏸ music resumed!")
+        await message.reply_text("⏸ music devam ediyor!")
 
 
-@Client.on_message(command("end") & other_filters)
+@Client.on_message(command("son") & other_filters)
 @errors
 @authorized_users_only
-async def stop(_, message: Message):
+async def son(_, message: Message):
     chat_id = get_chat_id(message.chat)
     if chat_id not in callsmusic.pytgcalls.active_calls:
         await message.reply_text("❗ nothing in streaming!")
@@ -134,13 +134,13 @@ async def stop(_, message: Message):
             pass
 
         callsmusic.pytgcalls.leave_group_call(chat_id)
-        await message.reply_text("⏹ streaming ended!")
+        await message.reply_text("⏹ music sonlandırıldı!")
 
 
-@Client.on_message(command("skip") & other_filters)
+@Client.on_message(command("atla") & other_filters)
 @errors
 @authorized_users_only
-async def skip(_, message: Message):
+async def atla(_, message: Message):
     global que
     chat_id = get_chat_id(message.chat)
     if chat_id not in callsmusic.pytgcalls.active_calls:
@@ -157,10 +157,10 @@ async def skip(_, message: Message):
 
     qeue = que.get(chat_id)
     if qeue:
-        skip = qeue.pop(0)
+        Atla = qeue.pop(0)
     if not qeue:
         return
-    await message.reply_text(f"⫸ skipped : **{skip[0]}**\n⫸ now playing : **{qeue[0][0]}**")
+    await message.reply_text(f"⫸ atlatılan şarkı : **{atla[0]}**\n⫸ çalan şarkı : **{qeue[0][0]}**")
 
 
 @Client.on_message(command("auth") & other_filters)
