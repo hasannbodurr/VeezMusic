@@ -794,9 +794,9 @@ async def lol_cb(b, cb):
             os.remove("final.png")
 
 
-@Client.on_message(command(["cal", f"ytp@{BOT_USERNAME}"]) & other_filters)
+@Client.on_message(command(["çal", f"ytp@{BOT_USERNAME}"]) & other_filters)
 @authorized_users_only
-async def calplay(_, message: Message):
+async def çalplay(_, message: Message):
     global que
     if message.chat.id in DISABLED_GROUPS:
         return
