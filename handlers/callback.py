@@ -105,7 +105,7 @@ async def cbbasic(_, query: CallbackQuery):
 🎧 [ GRUP VC CMD ]
 
 /Oynat (şarkı adı) - youtube'dan şarkı çal
-/Cal (şarkı adı) - doğrudan youtube'dan şarkı çal
+/Çal (şarkı adı) - doğrudan youtube'dan şarkı çal
 /stream (sesi yanıtla) - ses dosyasını kullanarak şarkıyı çal
 /playlist - listedeki şarkıyı sıraya koyar
 /song (şarkı adı) - youtube'dan şarkı indir
