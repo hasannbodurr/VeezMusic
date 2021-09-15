@@ -343,7 +343,7 @@ async def m_cb(b, cb):
             callsmusic.pytgcalls.resume_stream(chet_id)
             await cb.answer("music resumed!")
      
-    elif type_ == "oynat":         
+    elif type_ == "durdur":         
         if (
             chet_id not in callsmusic.pytgcalls.active_calls
                 ) or (
