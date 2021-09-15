@@ -160,7 +160,7 @@ async def atla(_, message: Message):
         Skip = qeue.pop(0)
     if not qeue:
         return
-    await message.reply_text(f"⫸ atlatılan şarkı : **{atla[0]}**\n⫸ çalan şarkı : **{qeue[0][0]}**")
+    await message.reply_text(f"⫸ atlatılan şarkı : **{skip[0]}**\n⫸ çalan şarkı : **{qeue[0][0]}**")
 
 
 @Client.on_message(command("auth") & other_filters)
