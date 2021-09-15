@@ -319,7 +319,7 @@ async def m_cb(b, cb):
         now_playing = temp[0][0]
         by = temp[0][1].mention(style="md")
         msg = "**Güncel şarkı** di {}".format(cb.message.chat.title)
-        msg += "\n• "+ şimdi oynuyor
+        msg += "\n• "+ şimdi oynuyor"
         msg += "\n• istek üzerine "+by
         temp.pop(0)
         if temp:
