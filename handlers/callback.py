@@ -42,7 +42,7 @@ async def cbstart(_, query: CallbackQuery):
                         "🌐 tag botu", url="https://t.me/UtagOnline_bot")
                 ],[
                     InlineKeyboardButton(
-                        "🧪Grubunuza özel bot kurmak için 🧪", url="https://t.me/Baykaoss"
+                        "🧪Grubunuza özel bot kurmak için 🧪", url="https://t.me/hasanbodurrr"
                     )
                 ]
             ]
