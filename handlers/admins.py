@@ -157,7 +157,7 @@ async def atla(_, message: Message):
 
     qeue = que.get(chat_id)
     if qeue:
-        Skip = qeue.pop(0)
+        skip = qeue.pop(0)
     if not qeue:
         return
     await message.reply_text(f"⫸ atlatılan şarkı : **{skip[0]}**\n⫸ çalan şarkı : **{qeue[0][0]}**")
